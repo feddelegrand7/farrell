@@ -7,7 +7,7 @@
 pharrell()
 }
 \value{
-A data frame of the efficiency results that include efficiency scores and peers' determination.
+A data frame of the efficiency results including efficiency scores and peers' determination.
 }
 \description{
 Pharrell Data Envelopment Analysis Gadget

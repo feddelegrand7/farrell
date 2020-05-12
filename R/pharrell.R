@@ -1,6 +1,6 @@
 #' Pharrell Data Envelopment Analysis Gadget
 #'
-#' @return A data frame of the efficiency results that include efficiency scores and peers' determination.
+#' @return A data frame of the efficiency results including efficiency scores and peers' determination.
 #' @export
 #'
 #'
@@ -293,8 +293,7 @@ body{background-color:#E0DAD0}
 
 
 
-      head(df())
-
+      utils::head(df())
 
 
 
@@ -419,7 +418,7 @@ fdh: Free disposability hull, no convexity assumption
     })
 
 
-   download_results <- reactive({
+   download_results <- shiny::reactive({
 
 
      shiny::req(input$input_select,
@@ -517,7 +516,7 @@ output$lambdas <- shiny::renderTable({
     })
 
 
-download_lambdas <- reactive({
+download_lambdas <- shiny::reactive({
 
 
   r_eff2 <- scores()

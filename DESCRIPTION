@@ -1,11 +1,11 @@
 Package: pharrell
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Pharrell Provides An Interactive Interface To Data Envelopment Analysis Modeling
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
+Author: Mohamed El Fodil Ihaddaden
+Maintainer: Mohamed El Fodil Ihaddaden <ihaddaden.fodeil@gmail.com>
+Description: pharrell aims to provide an interactive experience to Data Envelopment Analysis modeling.
+    The user can upload a csv file and download the results in the same format. pharrell is built upon the Benchmarking package. 
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
@@ -20,7 +20,9 @@ Imports:
     readr,
     rlang,
     tibble,
-    particlesjs (>= 0.1.1)
+    particlesjs (>= 0.1.1),
+    utils,
+    dplyr
 RoxygenNote: 7.1.0
 Remotes: 
     dreamRs/particlesjs
