@@ -5,7 +5,7 @@
 
 # First submission
 
--- R CMD check results ---------------------------------------------------- pharrell 0.1.0 ----
+-- R CMD check results ---------------------------------------------------- farrell 0.1.0 ----
 Duration: 24.5s
 
 0 errors √ | 0 warnings √ | 0 notes √

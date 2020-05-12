@@ -1,11 +1,10 @@
-Package: pharrell
+Package: farrell
 Type: Package
-Title: Pharrell Provides An Interactive Interface To Data Envelopment Analysis Modeling
+Title: Interactive Interface to Data Envelopment Analysis Modeling
 Version: 0.1.0
 Author: Mohamed El Fodil Ihaddaden
 Maintainer: Mohamed El Fodil Ihaddaden <ihaddaden.fodeil@gmail.com>
-Description: pharrell aims to provide an interactive experience to Data Envelopment Analysis modeling.
-    The user can upload a csv file and download the results in the same format. pharrell is built upon the Benchmarking package. 
+Description: Allows the user to execute interactively Data Envelopment Analysis models. 
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
@@ -20,11 +19,8 @@ Imports:
     readr,
     rlang,
     tibble,
-    particlesjs (>= 0.1.1),
     utils,
     dplyr
 RoxygenNote: 7.1.0
-Remotes: 
-    dreamRs/particlesjs
-URL: https://github.com/feddelegrand7/pharrell
-BugReports: https://github.com/feddelegrand7/pharrell/issues
+URL: https://github.com/feddelegrand7/farrell
+BugReports: https://github.com/feddelegrand7/farrell/issues

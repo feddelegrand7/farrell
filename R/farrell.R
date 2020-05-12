@@ -1,14 +1,15 @@
-#' Pharrell Data Envelopment Analysis Gadget
+#' farrell Data Envelopment Analysis Gadget
 #'
 #' @return A data frame of the efficiency results including efficiency scores and peers' determination.
 #' @export
 #'
 #'
 
-pharrell <- function(){
+farrell <- function(){
 
 
   ui <- miniUI::miniPage(
+
 
     shiny::tags$style("
 
@@ -16,8 +17,6 @@ h1{color:#337AB7;font-weight:bold; font-family:Verdana;}
 
 body{background-color:#E0DAD0}
                       "),
-
-    particlesjs::particles(),
 
 
     miniUI::miniTabstripPanel(
