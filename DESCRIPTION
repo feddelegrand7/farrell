@@ -23,3 +23,5 @@ Imports:
 RoxygenNote: 7.1.0
 Remotes: 
     dreamRs/particlesjs
+URL: https://github.com/feddelegrand7/pharrell
+BugReports: https://github.com/feddelegrand7/pharrell/issues
