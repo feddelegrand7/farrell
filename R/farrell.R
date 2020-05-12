@@ -15,7 +15,7 @@ farrell <- function(){
 
 h1{color:#337AB7;font-weight:bold; font-family:Verdana;}
 
-body{background-color:#E0DAD0}
+body{background-color:#F5F5F5}
                       "),
 
 
@@ -106,12 +106,6 @@ body{background-color:#E0DAD0}
                           choices = c("crs", "vrs", "irs",  "drs", "add", "fdh"),
                           options = list(
                             style = "btn-danger")),
-
-                        shiny::actionButton(inputId = "help", label = "Help"),
-
-                        shiny::tags$br(),
-
-                        shiny::tags$br(),
 
                         shinyWidgets::pickerInput(
                           inputId = "orientation_choose",
@@ -296,63 +290,6 @@ body{background-color:#E0DAD0}
 
 
 
-    })
-
-
-    shiny::observeEvent(input$help, {
-      shiny::showModal(shiny::modalDialog(
-        title = "Help",
-        shiny::HTML("
-
-<ul>
-
-<li>
-
-crs: Constant returns to scale, convexity and free disposability
-
-</li>
-
-<li>
-
-vrs: Variable returns to scale, convexity and free disposability
-
-</li>
-
-<li>
-
-irs: Increasing returns to scale (up-scaling, but not down-scaling), additivity, and free disposability
-
-</li>
-
-<li>
-
-drs: Decreasing returns to scale, convexity, down-scaling and free disposability
-</li>
-
-
-<li>
-
-add: Additivity (scaling up and down, but only with integers), and free disposability; also known af replicability and free disposability, the free disposability and replicability hull (frh) -- no convexity assumption
-
-</li>
-
-
-<li>
-
-fdh: Free disposability hull, no convexity assumption
-
-</li>
-
-
-</ul>
-
-
-<a href='https://cran.r-project.org/web/packages/Benchmarking/Benchmarking.pdf'> Source</a>
-
-
-
-             ")
-      ))
     })
 
 
