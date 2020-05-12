@@ -19,7 +19,8 @@ Imports:
     data.table,
     readr,
     rlang,
-    tibble
+    tibble,
+    particlesjs (>= 0.1.1)
 RoxygenNote: 7.1.0
 Remotes: 
     dreamRs/particlesjs

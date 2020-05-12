@@ -3,13 +3,16 @@
 #' @return A data frame of the efficiency results that include efficiency scores and peers' determination.
 #' @export
 #'
-#' @importFrom magrittr %>%
 #'
 
 pharrell <- function(){
 
 
   ui <- miniUI::miniPage(
+
+    shiny::tags$style("h1{color:#337AB7;font-weight: bold;font-family:Verdana;}"),
+
+    particlesjs::particles(),
 
 
     miniUI::miniTabstripPanel(
@@ -21,7 +24,8 @@ pharrell <- function(){
       miniUI::miniTabPanel(
         title = "Loading Data",
 
-        icon = shiny::icon("lemon"),
+        icon = shiny::icon("angellist"),
+
 
         miniUI::miniContentPanel(
 
@@ -36,19 +40,14 @@ pharrell <- function(){
                                accept = c("csv", "CSV",
                                           "csv/text",
                                           "Comma Separated Values")),
-              shiny::tags$hr(),
-
-              shiny::numericInput(inputId = "num_observ",
-                                  label = "Number of rows to display",
-                                  value = 5,
-                                  min = 1)
+              shiny::tags$hr()
 
             ),
 
 
             shiny::mainPanel(
 
-              shiny::tags$h2("An overview of the data frame"),
+              shiny::tags$h1("Data Frame Overview"),
 
               shiny::tableOutput(outputId = "tbl_loading")
 
@@ -64,6 +63,8 @@ pharrell <- function(){
 
 
         title = "Model Tuning",
+
+        icon = shiny::icon("affiliatetheme"),
 
         miniUI::miniContentPanel(
 
@@ -157,7 +158,13 @@ pharrell <- function(){
 
         title = "Efficiency Results",
 
+        icon = shiny::icon("audible"),
+
         miniUI::miniContentPanel(
+
+          shiny::tags$h1("Efficiency Results", align = "center"),
+
+          shiny::tags$hr(),
 
         shiny::sidebarLayout(
 
@@ -176,6 +183,8 @@ pharrell <- function(){
 
           shiny::mainPanel(
 
+
+
             shinycssloaders::withSpinner(shiny::tableOutput("eff_results1"),
                                          color = "#324C63")
 
@@ -193,29 +202,34 @@ pharrell <- function(){
 
  miniUI::miniTabPanel(title = "Lambdas",
 
+    icon = shiny::icon("avianex"),
+
     miniUI::miniContentPanel(
 
-   shiny::tags$h1("Lambdas"),
+   shiny::tags$h1("Lambdas", align = "center"),
 
-   shiny::tableOutput(outputId = "lambdas")
+   shiny::tags$hr(),
+
+   shiny::tags$br(),
+
+   shiny::sidebarLayout(
 
 
+     shiny::sidebarPanel(
+       shiny::helpText("Click on the download button to get a csv file of the results"),
 
+       shiny::downloadButton(outputId = "dbtn2", label = "download"),
 
+     ),
 
+     shiny::mainPanel(shiny::tableOutput(outputId = "lambdas") %>%
+                 shinycssloaders::withSpinner(color = "#324C63")
+)
+
+   )
 
 
  ))
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -274,7 +288,7 @@ pharrell <- function(){
 
 
 
-      head(df(), n = input$num_observ)
+      head(df())
 
 
 
@@ -400,12 +414,48 @@ fdh: Free disposability hull, no convexity assumption
     })
 
 
+   download_results <- reactive({
+
+
+     shiny::req(input$input_select,
+                input$output_select,
+                input$orientation_choose,
+                input$RTS_choose,
+                input$ID_choose)
+
+     df <- df()
+
+     r_eff2 <- scores()
+
+     id <- df %>% dplyr::select(input$ID_choose)
+
+     id2 <- df[, input$ID_choose]
+
+     results <- dplyr::tibble(score = r_eff2$eff)
+
+     peers <- Benchmarking::peers(r_eff2, NAMES = df %>% dplyr::pull(input$ID_choose))
+
+     peers <- as.data.frame(peers)
+
+     results <- cbind(id, results, peers)
+
+     results <- results %>% dplyr::arrange(dplyr::desc(score))
+
+
+     return(results)
+
+
+
+   })
+
+
+
     output$dbtn1 <- shiny::downloadHandler(
       filename = function() {
         paste('efficiency-', Sys.Date(), '.csv', sep='')
       },
       content = function(file) {
-        readr::write_csv(scores(), path = file)
+        readr::write_csv(download_results(), path = file)
       }
 
 
@@ -444,20 +494,56 @@ output$lambdas <- shiny::renderTable({
     id2 <- df[, input$ID_choose]
 
 
-    lambdas <- r_eff2$lambda
+    lambdas1 <- r_eff2$lambda
 
-    lambdas <- as.data.frame(lambdas) %>% rlang::set_names(as.character(id2))
+    lambdas2 <- as.data.frame(lambdas1) %>% rlang::set_names(as.character(id2))
 
-    rownames(lambdas) <- id2
+    rownames(lambdas2) <- id2
 
-    lambdas <- lambdas %>% dplyr::select_if(~sum(.) > 0)
+    lambdas3 <- lambdas2 %>% dplyr::select_if(~sum(.) > 0)
 
-    lambdas <- tibble::rownames_to_column(lambdas, var = "names")
+    lambdas4 <- tibble::rownames_to_column(lambdas3, var = "names")
 
-    print(lambdas)
+    print(lambdas4)
 
 
     })
+
+
+download_lambdas <- reactive({
+
+
+  r_eff2 <- scores()
+
+  df <- df()
+
+  id2 <- df[, input$ID_choose]
+
+
+  lambdas1 <- r_eff2$lambda
+
+  lambdas2 <- as.data.frame(lambdas1) %>% rlang::set_names(as.character(id2))
+
+  rownames(lambdas2) <- id2
+
+  lambdas3 <- lambdas2 %>% dplyr::select_if(~sum(.) > 0)
+
+  lambdas4 <- tibble::rownames_to_column(lambdas3, var = "names")
+
+  return(lambdas4)
+
+
+
+})
+
+
+output$dbtn2 <- shiny::downloadHandler(
+  filename = function() {
+    paste('lambdas-', Sys.Date(), '.csv', sep='')
+  },
+  content = function(file) {
+    readr::write_csv(download_lambdas(), path = file)
+  })
 
 
 
