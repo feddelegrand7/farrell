@@ -10,7 +10,12 @@ pharrell <- function(){
 
   ui <- miniUI::miniPage(
 
-    shiny::tags$style("h1{color:#337AB7;font-weight: bold;font-family:Verdana;}"),
+    shiny::tags$style("
+
+h1{color:#337AB7;font-weight:bold; font-family:Verdana;}
+
+body{background-color:#E0DAD0}
+                      "),
 
     particlesjs::particles(),
 
@@ -24,7 +29,7 @@ pharrell <- function(){
       miniUI::miniTabPanel(
         title = "Loading Data",
 
-        icon = shiny::icon("angellist"),
+        icon = shiny::icon("accusoft"),
 
 
         miniUI::miniContentPanel(
@@ -496,7 +501,9 @@ output$lambdas <- shiny::renderTable({
 
     lambdas1 <- r_eff2$lambda
 
-    lambdas2 <- as.data.frame(lambdas1) %>% rlang::set_names(as.character(id2))
+    lambdas2 <- as.data.frame(lambdas1)
+
+    lambdas2 <- rlang::set_names(lambdas2, as.character(id2))
 
     rownames(lambdas2) <- id2
 
@@ -522,7 +529,9 @@ download_lambdas <- reactive({
 
   lambdas1 <- r_eff2$lambda
 
-  lambdas2 <- as.data.frame(lambdas1) %>% rlang::set_names(as.character(id2))
+  lambdas2 <- as.data.frame(lambdas1)
+
+  lambdas2 <- rlang::set_names(lambdas2, as.character(id2))
 
   rownames(lambdas2) <- id2
 
