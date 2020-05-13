@@ -48,20 +48,20 @@ or if you're working on RStudio, just click on __Addins__ then __farrell__.
 
 Hit __Browse...__ to upload your data frame in a csv format. All the inputs and outputs must be contained within the data frame (each column for each input/output). Further, the data frame needs to contain an identification column in order to identify Decision Making Units. It can be a numeric or a character column. 
 
-![](man/figures/fig1.png)
+![](fig1.png)
 
 
 In the following examples, we use the mtcars data frame which has been exported in a csv format with an additional column: __cars name__. 
 
 
 
-![](man/figures/fig2.png)
+![](fig2.png)
 
 
 ## Model Tuning
 
 
-![](man/figures/fig3.png)
+![](fig3.png)
 
 Within the Model Tuning tab, you will select the input and output variables, then you determine your identification column. Then you choose the Returns to Scale assumption between: crs, vrs, irs, drs, add and fdh. After that, you determine the orientation of the model, whether input or output. Finally, hit __Calculate Efficiency__ to get the results. 
 
@@ -69,7 +69,7 @@ Let's for example consider __mpg__ and __disp__ as the output variables and __wt
 
 
 
-![](man/figures/fig4.png)
+![](fig4.png)
 
 ## Efficiency Results
 
@@ -77,7 +77,7 @@ Let's for example consider __mpg__ and __disp__ as the output variables and __wt
 The Efficiency Results tab displays the efficiency scores along with the peers for each unit in a descending order. You have the ability to download the result in a csv format. The tab also provides a summary of the distribution of the efficiency scores. 
 
 
-![](man/figures/fig5.png)
+![](fig5.png)
 
 
 ## Lambdas
@@ -86,7 +86,7 @@ The Efficiency Results tab displays the efficiency scores along with the peers f
 Finally, in the Lambdas tab, you get the contribution of the peers to the inefficient units' score. 
 
 
-![](man/figures/fig6.png)
+![](fig6.png)
 
 
 
