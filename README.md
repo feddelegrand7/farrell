@@ -41,16 +41,16 @@ for each input/output). Further, the data frame needs to contain an
 identification column in order to identify Decision Making Units. It can
 be a numeric or a character column.
 
-![](C:/Users/Administrateur/Desktop/pharrell/man/figures/fig1.png)
+![](man/figures/fig1.png)
 
 In the following examples, we use the mtcars data frame which has been
 exported in a csv format with an additional column: **cars name**.
 
-![](C:/Users/Administrateur/Desktop/pharrell/man/figures/fig2.png)
+![](man/figures/fig2.png)
 
 ## Model Tuning
 
-![](C:/Users/Administrateur/Desktop/pharrell/man/figures/fig3.png)
+![](man/figures/fig3.png)
 
 Within the Model Tuning tab, you will select the input and output
 variables, then you determine your identification column. Then you
@@ -63,7 +63,7 @@ Let’s for example consider **mpg** and **disp** as the output variables
 and **wt** as input. We choose **cars name** as the identification
 column and model an input-oriented model with crs assumption.
 
-![](C:/Users/Administrateur/Desktop/pharrell/man/figures/fig4.png)
+![](man/figures/fig4.png)
 
 ## Efficiency Results
 
@@ -72,14 +72,14 @@ peers for each unit in a descending order. You have the ability to
 download the result in a csv format. The tab also provides a summary of
 the distribution of the efficiency scores.
 
-![](C:/Users/Administrateur/Desktop/pharrell/man/figures/fig5.png)
+![](man/figures/fig5.png)
 
 ## Lambdas
 
 Finally, in the Lambdas tab, you get the contribution of the peers to
 the inefficient units’ score.
 
-![](C:/Users/Administrateur/Desktop/pharrell/man/figures/fig6.png)
+![](man/figures/fig6.png)
 
 ## Code of Conduct
 
