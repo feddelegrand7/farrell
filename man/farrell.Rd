@@ -12,3 +12,8 @@ A data frame of the efficiency results including efficiency scores and peers' de
 \description{
 farrell Data Envelopment Analysis Gadget
 }
+\examples{
+\dontrun{
+farrell()
+}
+}

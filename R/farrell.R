@@ -2,8 +2,10 @@
 #'
 #' @return A data frame of the efficiency results including efficiency scores and peers' determination.
 #' @export
-#'
-#'
+#' @examples
+#' \dontrun{
+#' farrell()
+#' }
 
 farrell <- function(){
 
