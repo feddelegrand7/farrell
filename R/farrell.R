@@ -252,6 +252,9 @@ body{background-color:#F5F5F5}
       ),
 
 
+# slacks ------------------------------------------------------------------
+
+
       miniUI::miniTabPanel(
         title = "Slacks",
         icon = shiny::icon("air-freshener"),
@@ -603,6 +606,76 @@ body{background-color:#F5F5F5}
 
     )
 
+
+
+
+    slacks_react <- shiny::reactive({
+
+
+      df <- df()
+
+
+      inputs <- df %>% dplyr::select(input$input_select)
+      outputs <- df %>% dplyr::select(input$output_select)
+
+      orientation <- switch(input$orientation_choose,
+                            "input" = "in" ,
+                            "output" = "out")
+
+      r_eff <- Benchmarking::dea(
+        X = data.matrix(inputs),
+        Y = data.matrix(outputs),
+        RTS = input$RTS_choose,
+        ORIENTATION = orientation,
+        SLACK = T
+      )
+
+      id <- df %>% dplyr::select(input$ID_choose)
+
+
+      sum <- r_eff$sum
+
+      sum <- as.data.frame(sum)
+
+      sx <- r_eff$sx
+
+      sy <- r_eff$sy
+
+      colnames(sx) <- input$input_select
+
+      colnames(sy) <- input$output_select
+
+      slack_data <- cbind(sum, sx, sy)
+
+      colnames(slack_data) <- paste(colnames(slack_data), "slack", sep = "_")
+
+      slack_data_final <- cbind(id, slack_data)
+
+      return(slack_data_final)
+
+
+
+
+
+
+    })
+
+    output$Slacks <- shiny::renderTable({
+
+      shiny::req(
+        input$input_select,
+        input$output_select,
+        input$orientation_choose,
+        input$RTS_choose,
+        input$ID_choose
+      )
+
+
+      slacks_react()
+
+
+
+    })
 
   }
 
