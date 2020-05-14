@@ -249,7 +249,41 @@ body{background-color:#F5F5F5}
 
           )
         )
+      ),
+
+
+      miniUI::miniTabPanel(
+        title = "Slacks",
+        icon = shiny::icon("air-freshener"),
+        miniUI::miniContentPanel(
+
+          shiny::tags$h1("Slacks", align = "center"),
+          shiny::tags$hr(),
+          shiny::tags$br(),
+
+        shiny::sidebarLayout(
+
+          shiny::sidebarPanel(
+
+            shiny::helpText("Click on the download button to get a csv file of the results"),
+            shiny::downloadButton(outputId = "btn4", label = "download")
+          ),
+
+          shiny::mainPanel(
+
+            shiny::tableOutput(outputId = "Slacks") %>%
+              shinycssloaders::withSpinner(color = "#324C63")
+
+          )
+
+        )
+
+
+        )
       )
+
+
+
 
 
 
