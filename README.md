@@ -13,8 +13,7 @@ Envelopment Analysis modeling in R. The farrell package is built upon
 
 ## Installation
 
-You can install the development version of farrell from
-[CRAN](https://CRAN.R-project.org) with:
+You can install the development version of farrell with:
 
 ``` r
 remotes::install_github("feddelegrand7/farrell")
