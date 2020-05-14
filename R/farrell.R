@@ -365,8 +365,7 @@ body{background-color:#F5F5F5}
 
       results <- dplyr::tibble(score = r_eff2$eff)
 
-      peers <-
-        Benchmarking::peers(r_eff2, NAMES = df %>% dplyr::pull(input$ID_choose))
+      peers <- Benchmarking::peers(r_eff2, NAMES = df %>% dplyr::pull(input$ID_choose))
 
       peers <- as.data.frame(peers)
 
@@ -503,6 +502,9 @@ body{background-color:#F5F5F5}
                             "input" = "in" ,
                             "output" = "out")
 
+      id <- df %>% dplyr::select(input$ID_choose)
+
+
       r_eff_crs <- Benchmarking::dea(
         X = data.matrix(inputs),
         Y = data.matrix(outputs),
@@ -526,6 +528,8 @@ body{background-color:#F5F5F5}
 
 
       scale <- as.data.frame(scale)
+
+      scale <- cbind(id, scale)
 
 
       scale <- scale %>% dplyr::arrange(desc(CRS))
