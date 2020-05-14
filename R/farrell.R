@@ -269,7 +269,7 @@ body{background-color:#F5F5F5}
           shiny::sidebarPanel(
 
             shiny::helpText("Click on the download button to get a csv file of the results"),
-            shiny::downloadButton(outputId = "btn4", label = "download")
+            shiny::downloadButton(outputId = "dbtn4", label = "download")
           ),
 
           shiny::mainPanel(
@@ -676,6 +676,20 @@ body{background-color:#F5F5F5}
 
 
     })
+
+
+    output$dbtn4 <- shiny::downloadHandler(
+      filename = function() {
+        paste('slacks-', Sys.Date(), '.csv', sep = '')
+      },
+      content = function(file) {
+        readr::write_csv(slacks_react(), path = file)
+      }
+
+
+    )
+
+
 
   }
 
