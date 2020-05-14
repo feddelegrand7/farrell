@@ -554,6 +554,17 @@ body{background-color:#F5F5F5}
 
 
 
+    output$dbtn3 <- shiny::downloadHandler(
+      filename = function() {
+        paste('scale-efficiency-', Sys.Date(), '.csv', sep = '')
+      },
+      content = function(file) {
+        readr::write_csv(scale_eff(), path = file)
+      }
+
+
+    )
+
 
   }
 
