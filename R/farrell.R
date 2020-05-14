@@ -411,6 +411,8 @@ body{background-color:#F5F5F5}
       results <- results %>% dplyr::arrange(dplyr::desc(score))
 
 
+
+
       return(results)
 
 
@@ -556,11 +558,21 @@ body{background-color:#F5F5F5}
         ORIENTATION = orientation
       )
 
+      r_eff_drs <- Benchmarking::dea(
+        X = data.matrix(inputs),
+        Y = data.matrix(outputs),
+        RTS = "drs",
+        ORIENTATION = orientation
+      )
+
+
+
 
       scale <- cbind(
         CRS = r_eff_crs$eff,
         VRS = r_eff_vrs$eff,
-        SE = r_eff_crs$eff / r_eff_vrs$eff
+        SE = r_eff_crs$eff / r_eff_vrs$eff,
+        DRS = r_eff_drs$eff
       )
 
 
@@ -571,8 +583,20 @@ body{background-color:#F5F5F5}
 
       scale <- scale %>% dplyr::arrange(desc(CRS))
 
+      scale <- scale %>% dplyr::mutate(Scale = dplyr::case_when(
 
-      scale
+
+        abs(CRS - VRS) < 1e-4 ~ "ORS",
+        abs(VRS - DRS) < 1e-4 ~ "DRS",
+
+
+        TRUE ~ "IRS"
+
+
+
+      ))
+
+      return(scale)
 
 
     })
