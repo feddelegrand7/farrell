@@ -88,6 +88,13 @@ consideration.
 
 ![](man/figures/fig7.png)
 
+## Slacks
+
+The Slacks tab displays a data frame containing the sum of the slacks
+and the slacks for each input/output variables.
+
+![](man/figures/fig8.png)
+
 ## Code of Conduct
 
 Please note that the farrell project is released with a [Contributor

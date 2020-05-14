@@ -95,7 +95,10 @@ The SE tab provides the Scale Efficiency score of each DMU under consideration.
 
 ![](fig7.png)
 
+## Slacks
 
+The Slacks tab displays a data frame containing the sum of the slacks and the slacks for each input/output variables.
 
+![](fig8.png)
 
 
