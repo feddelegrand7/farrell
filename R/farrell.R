@@ -320,40 +320,9 @@ body{background-color:#F5F5F5}
 
 
 
-    output$eff_results1 <- shiny::renderTable({
 
+# Reactive Efficiency Scores -------------------------------------------------------
 
-      shiny::req(input$input_select,
-                 input$output_select,
-                 input$orientation_choose,
-                 input$RTS_choose,
-                 input$ID_choose)
-
-      df <- df()
-
-      r_eff2 <- scores()
-
-      id <- df %>% dplyr::select(input$ID_choose)
-
-      id2 <- df[, input$ID_choose]
-
-      results <- dplyr::tibble(score = r_eff2$eff)
-
-      peers <- Benchmarking::peers(r_eff2, NAMES = df %>% dplyr::pull(input$ID_choose))
-
-      peers <- as.data.frame(peers)
-
-      results <- cbind(id, results, peers)
-
-      results <- results %>% dplyr::arrange(dplyr::desc(score))
-
-
-      print(results)
-
-
-
-
-    })
 
 
    download_results <- shiny::reactive({
@@ -392,6 +361,21 @@ body{background-color:#F5F5F5}
 
 
 
+   output$eff_results1 <- shiny::renderTable({
+
+
+     download_results()
+
+
+   })
+
+
+
+# Downloading Efficiency Scores -------------------------------------------
+
+
+
+
     output$dbtn1 <- shiny::downloadHandler(
       filename = function() {
         paste('efficiency-', Sys.Date(), '.csv', sep='')
@@ -421,37 +405,10 @@ body{background-color:#F5F5F5}
 
 
 
-output$lambdas <- shiny::renderTable({
-
-  shiny::req(input$input_select,
-             input$output_select,
-             input$orientation_choose,
-             input$RTS_choose,
-             input$ID_choose)
-
-    r_eff2 <- scores()
-
-    df <- df()
-
-    id2 <- df[, input$ID_choose]
 
 
-    lambdas1 <- r_eff2$lambda
+# reactive lambdas --------------------------------------------------------
 
-    lambdas2 <- as.data.frame(lambdas1)
-
-    lambdas2 <- rlang::set_names(lambdas2, as.character(id2))
-
-    rownames(lambdas2) <- id2
-
-    lambdas3 <- lambdas2 %>% dplyr::select_if(~sum(.) > 0)
-
-    lambdas4 <- tibble::rownames_to_column(lambdas3, var = "names")
-
-    print(lambdas4)
-
-
-    })
 
 
 download_lambdas <- shiny::reactive({
@@ -481,6 +438,17 @@ download_lambdas <- shiny::reactive({
 
 
 })
+
+
+output$lambdas <- shiny::renderTable({
+
+  download_lambdas()
+
+})
+
+
+# Downloading lambdas -----------------------------------------------------
+
 
 
 output$dbtn2 <- shiny::downloadHandler(
