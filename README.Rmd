@@ -85,12 +85,24 @@ The Efficiency Results tab displays the efficiency scores along with the peers f
 ## Lambdas
 
 
-Finally, in the Lambdas tab, you get the contribution of the peers to the inefficient units' score. 
+In the Lambdas tab, you get the contribution of the peers to the inefficient units' score. 
 
 
 ![](man/figures/fig6.png)
 
 
+## Scale Efficiency 
+
+
+The SE tab provides the Scale Efficiency score of each DMU under consideration. 
+
+![](man/figures/fig7.png)
+
+
+
 ## Code of Conduct
   
 Please note that the farrell project is released with a [Contributor Code of Conduct](https://contributor-covenant.org/version/2/0/CODE_OF_CONDUCT.html). By contributing to this project, you agree to abide by its terms.
+
+
+

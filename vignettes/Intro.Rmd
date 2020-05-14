@@ -83,11 +83,17 @@ The Efficiency Results tab displays the efficiency scores along with the peers f
 ## Lambdas
 
 
-Finally, in the Lambdas tab, you get the contribution of the peers to the inefficient units' score. 
+In the Lambdas tab, you get the contribution of the peers to the inefficient units' score. 
 
 
 ![](fig6.png)
 
+## Scale Efficiency 
+
+
+The SE tab provides the Scale Efficiency score of each DMU under consideration. 
+
+![](fig7.png)
 
 
 

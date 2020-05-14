@@ -76,10 +76,17 @@ the distribution of the efficiency scores.
 
 ## Lambdas
 
-Finally, in the Lambdas tab, you get the contribution of the peers to
-the inefficient units’ score.
+In the Lambdas tab, you get the contribution of the peers to the
+inefficient units’ score.
 
 ![](man/figures/fig6.png)
+
+## Scale Efficiency
+
+The SE tab provides the Scale Efficiency score of each DMU under
+consideration.
+
+![](man/figures/fig7.png)
 
 ## Code of Conduct
 
