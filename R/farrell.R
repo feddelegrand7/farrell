@@ -9,14 +9,7 @@
 
 farrell <- function() {
   ui <- miniUI::miniPage(
-    shiny::tags$style(
-      "
-
-h1{color:#337AB7;font-weight:bold; font-family:Verdana;}
-
-body{background-color:#F5F5F5}
-                      "
-    ),
+    shiny::includeCSS("styles.css"),
 
 
     miniUI::miniTabstripPanel(
