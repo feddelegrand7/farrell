@@ -97,9 +97,10 @@ and the slacks for each input/output variables.
 ## Citation
 
 If you use the farrell package in your publications or teaching
-activities, please cite it as follows: Mohamed El Fodil Ihaddaden
-(2020). farrell: Interactive Interface to Data Envelopment Analysis
-Modeling. R package version 0.1.0.
+activities, please cite it as follows:
+
+Mohamed El Fodil Ihaddaden (2020). farrell: Interactive Interface to
+Data Envelopment Analysis Modeling. R package version 0.1.0.
 <https://github.com/feddelegrand7/farrell>
 
 A BibTeX entry for LaTeX users is

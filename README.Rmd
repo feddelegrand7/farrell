@@ -112,6 +112,8 @@ The Slacks tab displays a data frame containing the sum of the slacks and the sl
 ## Citation 
 
 If you use the farrell package in your publications or teaching activities, please cite it as follows:
+
+
   Mohamed El Fodil Ihaddaden (2020). farrell:
   Interactive Interface to Data Envelopment
   Analysis Modeling. R package version 0.1.0.
