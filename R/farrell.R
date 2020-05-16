@@ -1,6 +1,6 @@
 #' farrell Data Envelopment Analysis Gadget
 #'
-#' @return A data frame of the efficiency results including efficiency scores and peers' determination.
+#' @return A data frame of the DEA results.
 #' @export
 #' @examples
 #' \dontrun{
