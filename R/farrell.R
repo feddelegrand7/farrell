@@ -28,6 +28,8 @@ farrell <- function() {
           shiny::tags$br(),
           shiny::sidebarLayout(
             shiny::sidebarPanel(
+
+
               shiny::fileInput(
                 inputId = "file1",
                 label = "Load a csv file",
