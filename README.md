@@ -35,10 +35,10 @@ or if you’re working on RStudio, just click on **Addins** then
 ## Data Loading:
 
 Hit **Browse…** to upload your data frame in a csv format. All the
-inputs and outputs must be contained within the data frame (each column
-for each input/output). Further, the data frame needs to contain an
-identification column in order to identify Decision Making Units. It can
-be a numeric or a character column.
+inputs and outputs must be contained within the uploaded data frame.
+Further, the data frame needs to contain an identification column in
+order to identify Decision Making Units distinctively. It can be a
+numeric or a character column.
 
 ![](man/figures/fig1.png)
 
@@ -93,6 +93,21 @@ The Slacks tab displays a data frame containing the sum of the slacks
 and the slacks for each input/output variables.
 
 ![](man/figures/fig8.png)
+
+## Citation
+
+If you use the farrell package in your publications or teaching
+activities, please cite it as follows: Mohamed El Fodil Ihaddaden
+(2020). farrell: Interactive Interface to Data Envelopment Analysis
+Modeling. R package version 0.1.0.
+<https://github.com/feddelegrand7/farrell>
+
+A BibTeX entry for LaTeX users is
+
+@Manual{, title = {farrell: Interactive Interface to Data Envelopment
+Analysis Modeling}, author = {Mohamed El Fodil Ihaddaden}, note = {R
+package version 0.1.0}, url =
+{<https://github.com/feddelegrand7/farrell>}, }
 
 ## Code of Conduct
 
