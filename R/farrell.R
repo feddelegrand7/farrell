@@ -406,6 +406,12 @@ farrell <- function() {
       results <- results %>% dplyr::arrange(dplyr::desc(score))
 
 
+      results <-  results %>% dplyr::mutate(
+
+        score =  sprintf('%.4f', score)
+
+      )
+
 
 
       return(results)
@@ -491,6 +497,12 @@ farrell <- function() {
 
       lambdas3 <- lambdas2 %>% dplyr::select_if( ~ sum(.) > 0)
 
+      lambdas3 <-  lambdas3 %>% dplyr::mutate_all(
+
+        ~ sprintf('%.4f', .)
+
+      )
+
       lambdas4 <- tibble::rownames_to_column(lambdas3, var = "names")
 
       return(lambdas4)
@@ -573,6 +585,8 @@ farrell <- function() {
 
       scale <- as.data.frame(scale)
 
+
+
       scale <- cbind(id, scale)
 
 
@@ -590,6 +604,10 @@ farrell <- function() {
 
 
       ))
+
+      scale <- scale %>% dplyr::mutate_at(
+        .vars = c("CRS", "VRS", "SE", "DRS"),
+        .funs = ~ sprintf('%.4f', .))
 
       return(scale)
 
@@ -669,6 +687,10 @@ farrell <- function() {
       colnames(slack_data) <- paste(colnames(slack_data), "slack", sep = "_")
 
       slack_data_final <- cbind(id, slack_data)
+
+      slack_data_final <- slack_data_final %>% dplyr::mutate_at(
+        .vars = dplyr::vars(dplyr::ends_with("_slack")),
+        .funs = ~ sprintf('%.4f', .))
 
       return(slack_data_final)
 
