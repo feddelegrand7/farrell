@@ -1440,6 +1440,11 @@ farrell <- function() {
         .vars = dplyr::vars(dplyr::ends_with("_slack")),
         .funs = ~ sprintf('%.4f', .))
 
+
+      slack_data_final <- slack_data_final %>% dplyr::mutate_at(
+        .vars = dplyr::vars(dplyr::ends_with("_slack")),
+        .funs = ~ as.numeric(.))
+
       return(slack_data_final)
 
 
