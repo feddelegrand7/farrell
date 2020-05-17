@@ -5,23 +5,14 @@
 \title{farrell Data Envelopment Analysis Gadget}
 \usage{
 farrell()
-
-farrell()
 }
 \value{
-A data frame of the DEA results.
-
 A data frame of the efficiency results including efficiency scores and peers' determination.
 }
 \description{
 farrell Data Envelopment Analysis Gadget
-
-farrell Data Envelopment Analysis Gadget
 }
 \examples{
-\dontrun{
-farrell()
-}
 \dontrun{
 farrell()
 }

@@ -10,7 +10,7 @@
 
 farrell <- function() {
   ui <- miniUI::miniPage(
-    shiny::includeCSS("www/styles.css"),
+    shiny::includeCSS("styles.css"),
 
 
     miniUI::miniTabstripPanel(

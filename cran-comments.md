@@ -5,7 +5,7 @@
 
 # First submission
 
--- R CMD check results ---------------------------------------------- farrell 0.1.0 ----
-Duration: 46.2s
+-- R CMD check results -------------------------------------- farrell 0.1.0 ----
+Duration: 35.2s
 
-0 errors √ | 0 warnings √ | 0 notes √
+0 errors v | 0 warnings v | 0 notes v
