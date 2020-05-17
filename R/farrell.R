@@ -9,7 +9,7 @@
 
 farrell <- function() {
   ui <- miniUI::miniPage(
-    shiny::includeCSS("styles.css"),
+    shiny::includeCSS("man/styles.css"),
 
 
     miniUI::miniTabstripPanel(
@@ -539,7 +539,7 @@ farrell <- function() {
 
 
 
-    scale_eff <- reactive({
+    scale_eff <- shiny::reactive({
       df <- df()
 
 
@@ -592,7 +592,7 @@ farrell <- function() {
       scale <- cbind(id, scale)
 
 
-      scale <- scale %>% dplyr::arrange(desc(CRS))
+      scale <- scale %>% dplyr::arrange(dplyr::desc(CRS))
 
       scale <- scale %>% dplyr::mutate(Scale = dplyr::case_when(
 
