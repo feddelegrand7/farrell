@@ -426,7 +426,7 @@ farrell <- function() {
 
     output$eff_results1 <- DT::renderDataTable({
 
-      DT::datatable(download_results())
+      DT::datatable(download_results(), rownames = F)
 
 
 
@@ -518,7 +518,7 @@ farrell <- function() {
 
     output$lambdas <- DT::renderDataTable({
 
-      DT::datatable(download_lambdas())
+      DT::datatable(download_lambdas(), rownames = F)
 
     })
 
@@ -629,7 +629,7 @@ farrell <- function() {
         input$ID_choose
       )
 
-      DT::datatable(scale_eff())
+      DT::datatable(scale_eff(), rownames = F)
 
 
 
@@ -693,14 +693,18 @@ farrell <- function() {
 
       slack_data_final <- cbind(id, slack_data)
 
+
       slack_data_final <- slack_data_final %>% dplyr::mutate_at(
         .vars = dplyr::vars(dplyr::ends_with("_slack")),
         .funs = ~ sprintf('%.4f', .))
 
 
+
       slack_data_final <- slack_data_final %>% dplyr::mutate_at(
         .vars = dplyr::vars(dplyr::ends_with("_slack")),
         .funs = ~ as.numeric(.))
+
+
 
       return(slack_data_final)
 
@@ -721,7 +725,7 @@ farrell <- function() {
         input$ID_choose
       )
 
-      DT::datatable(slacks_react())
+      DT::datatable(slacks_react(), rownames = F)
 
 
 
