@@ -429,6 +429,7 @@ farrell <- function() {
 
       DT::datatable(download_results(), rownames = F) %>% DT::formatStyle(
         'score',
+        target = 'row',
         backgroundColor = DT::styleEqual(1, 'lightgreen')
       )
 
