@@ -488,24 +488,21 @@ farrell <- function() {
 
       df <- df()
 
-      id2 <- df[, input$ID_choose]
+      id2 <- df %>% pull(input$ID_choose)
 
 
       lambdas1 <- r_eff2$lambda
 
       lambdas2 <- as.data.frame(lambdas1)
 
-      lambdas2 <- rlang::set_names(lambdas2, as.character(id2))
+      names(lambdas2) <- as.character(id2)
 
-      rownames(lambdas2) <- id2
+      rownames(lambdas2) <- as.character(id2)
 
       lambdas3 <- lambdas2 %>% dplyr::select_if( ~ sum(.) > 0)
 
-      lambdas3 <-  lambdas3 %>% dplyr::mutate_all(
+      lambdas3[] <- lapply(lambdas3, sprintf, fmt = '%.4f')
 
-        ~ sprintf('%.4f', .)
-
-      )
 
       lambdas4 <- tibble::rownames_to_column(lambdas3, var = "names")
 
