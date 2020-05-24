@@ -265,6 +265,7 @@ farrell <- function() {
 
           shiny::sidebarPanel(
 
+            shiny::h4("The Slacks tab will be blank if there is no slacks"),
             shiny::helpText("Click on the download button to get a csv file of the results"),
             shiny::downloadButton(outputId = "dbtn4", label = "download")
           ),
@@ -426,7 +427,10 @@ farrell <- function() {
 
     output$eff_results1 <- DT::renderDataTable({
 
-      DT::datatable(download_results(), rownames = F)
+      DT::datatable(download_results(), rownames = F) %>% DT::formatStyle(
+        'score',
+        backgroundColor = DT::styleEqual(1, 'lightgreen')
+      )
 
 
 
@@ -488,7 +492,7 @@ farrell <- function() {
 
       df <- df()
 
-      id2 <- df %>% pull(input$ID_choose)
+      id2 <- df %>% dplyr::pull(input$ID_choose)
 
 
       lambdas1 <- r_eff2$lambda
@@ -723,9 +727,6 @@ farrell <- function() {
       )
 
       DT::datatable(slacks_react(), rownames = F)
-
-
-
     })
 
 
