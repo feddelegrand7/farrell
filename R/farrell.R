@@ -427,7 +427,7 @@ farrell <- function() {
 
     output$eff_results1 <- DT::renderDataTable({
 
-      DT::datatable(download_results(), rownames = F) %>% DT::formatStyle(
+      DT::datatable(download_results(), rownames = F, class = "compact") %>% DT::formatStyle(
         'score',
         target = 'row',
         backgroundColor = DT::styleEqual(1, 'lightgreen')
@@ -520,7 +520,7 @@ farrell <- function() {
 
     output$lambdas <- DT::renderDataTable({
 
-      DT::datatable(download_lambdas(), rownames = F)
+      DT::datatable(download_lambdas(), rownames = F,  class = "compact")
 
     })
 
@@ -631,7 +631,7 @@ farrell <- function() {
         input$ID_choose
       )
 
-      DT::datatable(scale_eff(), rownames = F)
+      DT::datatable(scale_eff(), rownames = F, class = "compact")
 
 
 
@@ -727,7 +727,7 @@ farrell <- function() {
         input$ID_choose
       )
 
-      DT::datatable(slacks_react(), rownames = F)
+      DT::datatable(slacks_react(), rownames = F, class = "compact")
     })
 
 
