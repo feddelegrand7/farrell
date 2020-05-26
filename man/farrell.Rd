@@ -7,13 +7,15 @@
 farrell()
 }
 \value{
-A data frame of the efficiency results including efficiency scores and peers' determination.
+A data frame of the efficiency results including efficiency scores, peers' determination scale inefficiencies' evaluation and slacks' calculation.
 }
 \description{
 farrell Data Envelopment Analysis Gadget
 }
 \examples{
-\dontrun{
+if(interactive()){
 farrell()
 }
+
+
 }

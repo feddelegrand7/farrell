@@ -1,12 +1,14 @@
 
 #' farrell Data Envelopment Analysis Gadget
 #'
-#' @return A data frame of the efficiency results including efficiency scores and peers' determination.
+#' @return A data frame of the efficiency results including efficiency scores, peers' determination scale inefficiencies' evaluation and slacks' calculation.
 #' @export
 #' @examples
-#' \dontrun{
+#' if(interactive()){
 #' farrell()
 #' }
+#'
+#'
 
 farrell <- function() {
   ui <- miniUI::miniPage(
