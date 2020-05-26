@@ -4,12 +4,11 @@ Title: Interactive Interface to Data Envelopment Analysis Modeling
 Version: 0.1.0
 Author: Mohamed El Fodil Ihaddaden
 Maintainer: Mohamed El Fodil Ihaddaden <ihaddaden.fodeil@gmail.com>
-Description: Allows the user to execute interactively radial data envelopment analysis models.
-    The user has the ability to upload a data frame, select the input/output variables, choose the technology assumption to adopt and decide whether to run an input or an output oriented model. 
-    When the model is executed a set of results are displayed which include efficiency scores, peers' determination, scale efficiencies' evaluation and slacks' calculation. 
-    Fore more information about the theoretical background of the package, please refer to:
-    Bogetoft & Otto (2011) <doi:10.1007/978-1-4419-7961-2>
-    Bogetoft & Otto (2011, ISBN:978-1-4419-7961-2)
+Description: Allows the user to execute interactively radial data envelopment analysis models. The user has the ability to upload a data frame, 
+    select the input/output variables, choose the technology assumption to adopt and decide whether to run an input or an output oriented model. 
+    When the model is executed a set of results are displayed which include efficiency scores, peers' determination, scale efficiencies' evaluation 
+    and slacks' calculation. Fore more information about the theoretical background of the package, 
+    please refer to Bogetoft & Otto (2011) <doi:10.1007/978-1-4419-7961-2>.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
