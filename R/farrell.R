@@ -12,7 +12,59 @@
 
 farrell <- function() {
   ui <- miniUI::miniPage(
-    shiny::includeCSS("styles.css"),
+
+    shiny::tags$style("
+
+
+
+    @import url('//fonts.googleapis.com/css?family=Lobster|Cabin:400,700');
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@500&display=swap');
+
+
+h1 {
+  font-family: 'Lobster', cursive;
+  font-weight: 500;
+  line-height: 1.1;
+  color: #ad1d28;
+}
+
+
+h3 {
+
+  font-family: 'Lobster', cursive;
+  font-weight: 500;
+  line-height: 1.1;
+  color: #ad1d28;
+
+}
+
+body {
+  background-color: #FAE5D3 ;
+}
+
+
+.well {
+
+  background-color : #FAE5D3;
+
+}
+
+hr{
+
+  background-color : #FAE5D3;
+
+}
+
+.fa-fw {
+
+
+  color : #ad1d28;
+
+
+}
+
+                      "),
+
 
 
     miniUI::miniTabstripPanel(
