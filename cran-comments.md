@@ -6,15 +6,7 @@
 # This is a resubmission 
 ------------------------------
 
-+ I've changed 'Data Envelopment Analysis' to 'data envelopment analysis' (removing capitalization) in the Description text
-
-+ I've added more details about the package functionalities in the Description text
-
-+ I've referenced the theoretical background of the package using a book's DOI
-
-+ I've replaced \dontrun{} by if(interactive()){}
-
- 
++ I've fixed the css file problem (which was causing a connection error)
 
 -- R CMD check results -------------------------------------- farrell 0.1.0 ----
 Duration: 23s
