@@ -19,10 +19,13 @@ The goal of farrell is to provide an interactive interface to Data Envelopment A
 
 ## Installation
 
-You can install the development version of farrell  with:
+You can install the farrell package from CRAN with:
 
 ```{r, eval = FALSE}
-remotes::install_github("feddelegrand7/farrell")
+
+install.packages("farrell")
+
+
 ```
 
 
@@ -99,4 +102,28 @@ The Slacks tab displays a data frame containing the sum of the slacks and the sl
 
 ![](fig8.png)
 
+## Citation 
+
+If you use the farrell package in your publications or teaching activities, please cite it as follows:
+
+
+ Mohamed El Fodil Ihaddaden (2020). farrell: Interactive
+  Interface to Data Envelopment Analysis Modeling. R
+  package version 0.2.0.
+  https://CRAN.R-project.org/package=farrell
+
+A BibTeX entry for LaTeX users is
+
+  @Manual{,
+    title = {farrell: Interactive Interface to Data Envelopment Analysis Modeling},
+    author = {Mohamed El Fodil Ihaddaden},
+    year = {2020},
+    note = {R package version 0.2.0},
+    url = {https://CRAN.R-project.org/package=farrell},
+  }
+
+
+## Code of Conduct
+  
+Please note that the farrell project is released with a [Contributor Code of Conduct](https://contributor-covenant.org/version/2/0/CODE_OF_CONDUCT.html). By contributing to this project, you agree to abide by its terms.
 

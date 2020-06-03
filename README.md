@@ -13,10 +13,11 @@ Envelopment Analysis modeling in R. The farrell package is built upon
 
 ## Installation
 
-You can install the development version of farrell with:
+You can install the farrell package from CRAN with:
 
 ``` r
-remotes::install_github("feddelegrand7/farrell")
+
+install.packages("farrell")
 ```
 
 ## Example
@@ -100,15 +101,15 @@ If you use the farrell package in your publications or teaching
 activities, please cite it as follows:
 
 Mohamed El Fodil Ihaddaden (2020). farrell: Interactive Interface to
-Data Envelopment Analysis Modeling. R package version 0.1.0.
-<https://github.com/feddelegrand7/farrell>
+Data Envelopment Analysis Modeling. R package version 0.2.0.
+<https://CRAN.R-project.org/package=farrell>
 
 A BibTeX entry for LaTeX users is
 
 @Manual{, title = {farrell: Interactive Interface to Data Envelopment
-Analysis Modeling}, author = {Mohamed El Fodil Ihaddaden}, note = {R
-package version 0.1.0}, url =
-{<https://github.com/feddelegrand7/farrell>}, }
+Analysis Modeling}, author = {Mohamed El Fodil Ihaddaden}, year =
+{2020}, note = {R package version 0.2.0}, url =
+{<https://CRAN.R-project.org/package=farrell>}, }
 
 ## Code of Conduct
 
