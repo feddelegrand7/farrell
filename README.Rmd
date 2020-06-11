@@ -128,20 +128,22 @@ The Slacks tab displays a data frame containing the sum of the slacks and the sl
 If you use the farrell package in your publications or teaching activities, please cite it as follows:
 
 
+ 
  Mohamed El Fodil Ihaddaden (2020). farrell: Interactive
-  Interface to Data Envelopment Analysis Modeling. R
-  package version 0.2.0.
-  https://CRAN.R-project.org/package=farrell
+  Interface to Data Envelopment Analysis Modeling Based
+  on the 'Benchmarking' Package. R package version 0.2.0.
+  https://github.com/feddelegrand7/farrell
 
 A BibTeX entry for LaTeX users is
 
   @Manual{,
-    title = {farrell: Interactive Interface to Data Envelopment Analysis Modeling},
+    title = {farrell: Interactive Interface to Data Envelopment Analysis Modeling Based on the 'Benchmarking' Package},
     author = {Mohamed El Fodil Ihaddaden},
-    year = {2020},
     note = {R package version 0.2.0},
-    url = {https://CRAN.R-project.org/package=farrell},
+    year={2020},
+    url = {https://github.com/feddelegrand7/farrell},
   }
+
 
 
 
