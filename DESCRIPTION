@@ -1,6 +1,6 @@
 Package: farrell
 Type: Package
-Title: Interactive Interface to Data Envelopment Analysis Modeling Based on the 'Benchmarking' Package
+Title: Interactive Interface to Data Envelopment Analysis Modeling
 Version: 0.2.0
 Author: Mohamed El Fodil Ihaddaden
 Maintainer: Mohamed El Fodil Ihaddaden <ihaddaden.fodeil@gmail.com>

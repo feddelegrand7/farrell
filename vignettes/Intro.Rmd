@@ -108,14 +108,13 @@ If you use the farrell package in your publications or teaching activities, plea
 
 
  Mohamed El Fodil Ihaddaden (2020). farrell: Interactive
-  Interface to Data Envelopment Analysis Modeling Based
-  on the 'Benchmarking' Package. R package version 0.2.0.
+  Interface to Data Envelopment Analysis Modeling. R package version 0.2.0.
   https://github.com/feddelegrand7/farrell
 
 A BibTeX entry for LaTeX users is
 
   @Manual{,
-    title = {farrell: Interactive Interface to Data Envelopment Analysis Modeling Based on the 'Benchmarking' Package},
+    title = {farrell: Interactive Interface to Data Envelopment Analysis Modeling},
     author = {Mohamed El Fodil Ihaddaden},
     note = {R package version 0.2.0},
     year={2020},
