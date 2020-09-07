@@ -113,15 +113,15 @@ If you use the farrell package in your publications or teaching
 activities, please cite it as follows:
 
 Mohamed El Fodil Ihaddaden (2020). farrell: Interactive Interface to
-Data Envelopment Analysis Modeling. R package version 0.2.0.
-<https://github.com/feddelegrand7/farrell>
+Data Envelopment Analysis Modeling based on the Benchmarking R package.
+R package version 0.2.0. <https://github.com/feddelegrand7/farrell>
 
 A BibTeX entry for LaTeX users is
 
 @Manual{, title = {farrell: Interactive Interface to Data Envelopment
-Analysis Modeling}, author = {Mohamed El Fodil Ihaddaden}, note = {R
-package version 0.2.0}, year={2020}, url =
-{<https://github.com/feddelegrand7/farrell>}, }
+Analysis Modeling based on the Benchmarking R package}, author =
+{Mohamed El Fodil Ihaddaden}, note = {R package version 0.2.0},
+year={2020}, url = {<https://github.com/feddelegrand7/farrell>}, }
 
 ## Code of Conduct
 
