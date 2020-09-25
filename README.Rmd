@@ -17,11 +17,11 @@ knitr::opts_chunk$set(
 # farrell <a><img src='man/figures/hex.png' align="right" height="200" /></a>
 
 <!-- badges: start -->
-[![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/farrell)](https://cran.r-project.org/package=farrell)
-[![CRAN_time_from_release](https://www.r-pkg.org/badges/ago/farrell)](https://cran.r-project.org/package=farrell)
-[![CRAN_latest_release_date](https://www.r-pkg.org/badges/last-release/farrell)](https://cran.r-project.org/package=farrell)
-[![metacran downloads](https://cranlogs.r-pkg.org/badges/farrell)](https://cran.r-project.org/package=farrell)
-[![metacran downloads](https://cranlogs.r-pkg.org/badges/grand-total/farrell)](https://cran.r-project.org/package=farrell)
+<!-- [![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/farrell)](https://cran.r-project.org/package=farrell) -->
+<!-- [![CRAN_time_from_release](https://www.r-pkg.org/badges/ago/farrell)](https://cran.r-project.org/package=farrell) -->
+<!-- [![CRAN_latest_release_date](https://www.r-pkg.org/badges/last-release/farrell)](https://cran.r-project.org/package=farrell) -->
+<!-- [![metacran downloads](https://cranlogs.r-pkg.org/badges/farrell)](https://cran.r-project.org/package=farrell) -->
+<!-- [![metacran downloads](https://cranlogs.r-pkg.org/badges/grand-total/farrell)](https://cran.r-project.org/package=farrell) -->
 [![Travis build status](https://travis-ci.com/feddelegrand7/farrell.svg?branch=master)](https://travis-ci.com/feddelegrand7/farrell)
 [![R badge](https://img.shields.io/badge/Build%20with-♥%20and%20R-blue)](https://github.com/feddelegrand7/farrell)
 
@@ -31,14 +31,17 @@ The goal of farrell is to provide an interactive interface to Data Envelopment A
 
 ## Installation
 
-You can install the farrell package from CRAN with:
+You can install the development version of `farrell` from Github with:
 
 
 
 
 ```{r, eval = FALSE}
 
-install.packages("farrell")
+# install.packages("remotes")
+
+remotes::install_github("feddelegrand7/farrell")
+
 
 ```
 

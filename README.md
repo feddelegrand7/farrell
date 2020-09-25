@@ -5,13 +5,16 @@
 
 <!-- badges: start -->
 
-[![CRAN\_Status\_Badge](https://www.r-pkg.org/badges/version/farrell)](https://cran.r-project.org/package=farrell)
-[![CRAN\_time\_from\_release](https://www.r-pkg.org/badges/ago/farrell)](https://cran.r-project.org/package=farrell)
-[![CRAN\_latest\_release\_date](https://www.r-pkg.org/badges/last-release/farrell)](https://cran.r-project.org/package=farrell)
-[![metacran
-downloads](https://cranlogs.r-pkg.org/badges/farrell)](https://cran.r-project.org/package=farrell)
-[![metacran
-downloads](https://cranlogs.r-pkg.org/badges/grand-total/farrell)](https://cran.r-project.org/package=farrell)
+<!-- [![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/farrell)](https://cran.r-project.org/package=farrell) -->
+
+<!-- [![CRAN_time_from_release](https://www.r-pkg.org/badges/ago/farrell)](https://cran.r-project.org/package=farrell) -->
+
+<!-- [![CRAN_latest_release_date](https://www.r-pkg.org/badges/last-release/farrell)](https://cran.r-project.org/package=farrell) -->
+
+<!-- [![metacran downloads](https://cranlogs.r-pkg.org/badges/farrell)](https://cran.r-project.org/package=farrell) -->
+
+<!-- [![metacran downloads](https://cranlogs.r-pkg.org/badges/grand-total/farrell)](https://cran.r-project.org/package=farrell) -->
+
 [![Travis build
 status](https://travis-ci.com/feddelegrand7/farrell.svg?branch=master)](https://travis-ci.com/feddelegrand7/farrell)
 [![R
@@ -25,11 +28,13 @@ Envelopment Analysis modeling in R. The farrell package is built upon
 
 ## Installation
 
-You can install the farrell package from CRAN with:
+You can install the development version of `farrell` from Github with:
 
 ``` r
 
-install.packages("farrell")
+# install.packages("remotes")
+
+remotes::install_github("feddelegrand7/farrell")
 ```
 
 ## Example
