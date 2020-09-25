@@ -8,9 +8,7 @@
 
 + I've fixed the css file problem (which was causing a connection error)
 
--- R CMD check results -------------------------------------- farrell 0.1.0 ----
-Duration: 1m 18.7s
+-- R CMD check results --------------------------------------------------------------- farrell 0.2.1 ----
+Duration: 26s
 
-0 errors v | 0 warnings v | 0 notes v
-
-R CMD check succeeded
+0 errors √ | 0 warnings √ | 0 notes √
