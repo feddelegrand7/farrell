@@ -139,25 +139,22 @@ hr{
             shiny::column(
               4,
 
-              shinyWidgets::pickerInput(
+              shiny::selectInput(
                 inputId = "ID_choose",
                 label = "Select the Identification column",
-                choices = "",
-                options = list(style = "btn-danger")
+                choices = ""
               ),
 
-              shinyWidgets::pickerInput(
+              shiny::selectInput(
                 inputId = "RTS_choose",
                 label = "Select the Returns to Scale assumption",
-                choices = c("crs", "vrs", "irs",  "drs", "add", "fdh"),
-                options = list(style = "btn-danger")
+                choices = c("crs", "vrs", "irs",  "drs", "add", "fdh")
               ),
 
-              shinyWidgets::pickerInput(
+              shiny::selectInput(
                 inputId = "orientation_choose",
                 label = "Select the orientation",
-                choices = c("input", "output"),
-                options = list(style = "btn-danger")
+                choices = c("input", "output")
               )
 
 
@@ -379,7 +376,7 @@ hr{
         inline = F
       )
 
-      shinyWidgets::updatePickerInput(
+      shiny::updateSelectInput(
         session = session,
         inputId = "ID_choose",
         label = "Select the Identification column",
