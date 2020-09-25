@@ -6,9 +6,11 @@
 # This is a resubmission 
 ------------------------------
 
-+ I've fixed the css file problem (which was causing a connection error)
++ I've fixed an issue related to the pickerInput() function from the shinyWidgets package. I've replace pickerInput() with classical Shiny selectInput().
+
+Best.
 
 -- R CMD check results --------------------------------------------------------------- farrell 0.2.1 ----
-Duration: 26s
+Duration: 21.2s
 
 0 errors √ | 0 warnings √ | 0 notes √
