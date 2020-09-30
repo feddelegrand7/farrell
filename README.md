@@ -28,13 +28,10 @@ Envelopment Analysis modeling in R. The farrell package is built upon
 
 ## Installation
 
-You can install the development version of `farrell` from Github with:
+You can install the `farrell` package from CRAN with:
 
 ``` r
-
-# install.packages("remotes")
-
-remotes::install_github("feddelegrand7/farrell")
+install.packages("farrell")
 ```
 
 ## Example
