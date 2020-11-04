@@ -5,16 +5,15 @@
 
 <!-- badges: start -->
 
-<!-- [![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/farrell)](https://cran.r-project.org/package=farrell) -->
 
-<!-- [![CRAN_time_from_release](https://www.r-pkg.org/badges/ago/farrell)](https://cran.r-project.org/package=farrell) -->
-
-<!-- [![CRAN_latest_release_date](https://www.r-pkg.org/badges/last-release/farrell)](https://cran.r-project.org/package=farrell) -->
-
-<!-- [![metacran downloads](https://cranlogs.r-pkg.org/badges/farrell)](https://cran.r-project.org/package=farrell) -->
-
-<!-- [![metacran downloads](https://cranlogs.r-pkg.org/badges/grand-total/farrell)](https://cran.r-project.org/package=farrell) -->
-
+[![CRAN\_Status\_Badge](https://www.r-pkg.org/badges/version/farrell)](https://cran.r-project.org/package=farrell)
+[![CRAN\_time\_from\_release](https://www.r-pkg.org/badges/ago/farrell)](https://cran.r-project.org/package=farrell)
+[![CRAN\_latest\_release\_date](https://www.r-pkg.org/badges/last-release/farrell)](https://cran.r-project.org/package=farrell)
+[![metacran
+downloads](https://cranlogs.r-pkg.org/badges/farrell)](https://cran.r-project.org/package=farrell)
+[![metacran
+downloads](https://cranlogs.r-pkg.org/badges/grand-total/farrell)](https://cran.r-project.org/package=farrell)
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://choosealicense.com/licenses/mit/)
 [![Travis build
 status](https://travis-ci.com/feddelegrand7/farrell.svg?branch=master)](https://travis-ci.com/feddelegrand7/farrell)
 [![R
